@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      boxShadow: {
+        'neon': "0 0 5px theme('colors.sky.200'), 0 0 20px theme('colors.sky.600'), inset 0 0 20px theme('colors.sky.600')"
+      }
+    },
   },
   plugins: [],
 }
