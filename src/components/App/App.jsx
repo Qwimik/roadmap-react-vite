@@ -1,13 +1,12 @@
 import React from "react";
 import Calendar from "../Calendar/Calendar.jsx";
+import AppDataProvider from "../../context/App/AppDataProvider.jsx";
 
 function App() {
-    const myEventsList = () => null
-
   return (
-      <>
-          <Calendar/>
-      </>
+      <AppDataProvider>
+        <Calendar/>
+      </AppDataProvider>
   )
 }
 

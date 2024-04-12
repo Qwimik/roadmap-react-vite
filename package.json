@@ -13,8 +13,10 @@
     "@preact/signals": "^1.2.2",
     "@preact/signals-react": "^2.0.0",
     "date-fns": "^3.6.0",
+    "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",
