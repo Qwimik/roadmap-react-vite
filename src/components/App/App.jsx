@@ -5,7 +5,7 @@ import AppDataProvider from "../../context/App/AppDataProvider.jsx";
 function App() {
   return (
       <AppDataProvider>
-        <Calendar/>
+          <Calendar/>
       </AppDataProvider>
   )
 }

@@ -1,16 +1,19 @@
-import {useReducer} from "react";
-import appReducer from "./appReducer.js";
-import initialState from "./initialState.js";
-import AppDataContext from "./AppDataContext.jsx";
+import React, { useMemo, useReducer } from 'react';
+
+import AppDataContext from "./AppDataContext";
+import appReducer from "./appReducer";
+import appDispatcher from "./appDispatcher";
+import initialState from "./initialState";
 
 const AppDataProvider = ({children}) => {
-    const [state, dispatch] = useReducer(appReducer, initialState);
+    const [appData, dispatch] = useReducer(appReducer, initialState);
+    const appActions = useMemo(() => appDispatcher(dispatch), [dispatch]);
 
     return (
-        <AppDataContext.Provider value={{state, dispatch}}>
+        <AppDataContext.Provider value={[appData, appActions]}>
             {children}
         </AppDataContext.Provider>
-    )
+    );
 }
 
 export default AppDataProvider;
