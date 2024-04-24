@@ -8,6 +8,8 @@ const initialState = {
     lastDayIndex: null,
     daysInMonth: null,
     isModalOpen: false,
+    posts: [],
+    tasks: {},
 }
 
 export default initialState;
