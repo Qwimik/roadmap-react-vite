@@ -7,11 +7,11 @@ export const fetchPosts = async () => {
     return data.json();
 }
 
-export const fetchPostsList = async (date = {id: '0'}) => {
+export const fetchPostsList = async (date = {id: '0'}, postsDataApi = []) => {
     const baseUrl = config.baseUrl;
 
-    const postsData = await fetchPosts();
-    const obj = postsData.filter((post) => post.id === date.id);
+    // const postsData = await fetchPosts();
+    const obj = postsDataApi?.filter((post) => post.id === date.id);
     if (obj.length !== 1) {
         const data = await fetch(`${baseUrl}posts`, {
             method: 'POST',

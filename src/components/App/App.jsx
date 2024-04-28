@@ -1,6 +1,6 @@
 import React from "react";
-import Calendar from "../Calendar/Calendar.jsx";
-import AppDataProvider from "../../context/App/AppDataProvider.jsx";
+import Calendar from "../Calendar";
+import AppDataProvider from "../../context/App/AppDataProvider";
 
 function App() {
   return (
